@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.openhab.addons.bundles</groupId>
+    <artifactId>org.openhab.addons.reactor.bundles</artifactId>
+    <version>2.5.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>org.openhab.binding.remoteboot</artifactId>
+
+  <name>openHAB Add-ons :: Bundles :: RemoteBoot Binding</name>
+    
+  <dependencies>
+  	<dependency>
+	   <groupId>com.fasterxml.jackson.core</groupId>
+	   <artifactId>jackson-annotations</artifactId>
+	   <version>2.9.9</version>
+	</dependency>
+	<dependency>
+	   <groupId>com.fasterxml.jackson.core</groupId>
+	   <artifactId>jackson-core</artifactId>
+	   <version>2.9.9</version>
+	</dependency>
+	<dependency>
+	   <groupId>com.fasterxml.jackson.core</groupId>
+	   <artifactId>jackson-databind</artifactId>
+	   <version>2.9.9</version>
+	</dependency>
+	<dependency>
+        <groupId>commons-codec</groupId>
+        <artifactId>commons-codec</artifactId>
+        <version>1.12</version>
+        <scope>provided</scope>
+    </dependency>
+  </dependencies>
+    
+  <properties>
+    <osgi.import>
+	  com.fasterxml.jackson.annotation, 
+	  com.fasterxml.jackson.core, 
+	  com.fasterxml.jackson.databind.introspect,
+	  com.fasterxml.jackson.databind.type,
+	  com.fasterxml.jackson.databind.util,
+	  org.apache.commons.codec.binary
+    </osgi.import>
+    <osgi.export>
+        com.fasterxml.jackson.annotation;version="2.9.9", 
+      com.fasterxml.jackson.core;version="2.9.9", 
+      com.fasterxml.jackson.databind.introspect;version="2.9.9",
+      com.fasterxml.jackson.databind.type;version="2.9.9",
+      com.fasterxml.jackson.databind.util;version="2.9.9",
+      org.apache.commons.codec.binary;version="1.12.0"
+    </osgi.export> 
+  </properties>
+  
+</project>

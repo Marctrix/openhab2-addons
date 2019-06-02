@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="remoteboot"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+    xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+    <!-- Sample Thing Type -->
+    <thing-type id="remoteboot">
+        <label>RemoteBoot Board</label>
+        <description>RemoteBoot Board</description>
+
+        <channels>
+            <channel id="power" typeId="power" ></channel>
+            <channel id="reset" typeId="reset" ></channel>
+            <channel id="hddled" typeId="hddled" ></channel>
+            <channel id="powerled" typeId="powerled"></channel>
+        </channels>
+        
+        <config-description>
+            <parameter name="host" type="text" required="true">
+                <context>network-address</context>
+                <label>Address</label>
+                <description>The address of the RemoteBoot Board.</description>
+            </parameter><parameter name="port" type="integer" required="false">
+                <label>Port</label>
+                <description>The API port of the RemoteBoard. Usually 80</description>
+                <default>80</default>
+                <advanced>true</advanced>
+            </parameter>
+            
+            <parameter name="password" type="text" required="true">
+                <label>Password</label>
+                <context>password</context>
+                <description>Password configured on the RemoteBoot.</description>
+            </parameter>
+            
+        </config-description>
+    </thing-type>
+    <channel-type id="power">
+        <item-type>Switch</item-type>
+        <label>Power</label>
+        <description>Power your PC on and off.</description>
+    </channel-type>
+    <channel-type id="reset">
+        <item-type>Switch</item-type>
+        <label>Reset</label>
+        <description>Restart your PC.</description>
+    </channel-type>
+    <channel-type id="hddled">
+        <item-type>Contact</item-type>
+        <label>HDD</label>
+        <description>Indicates the activity state of your HDD.</description>
+    </channel-type>
+        <channel-type id="powerled">
+        <item-type>Contact</item-type>
+        <label>Powered</label>
+        <description>Indicates weather your PC is ON or OFF.</description>
+    </channel-type>
+</thing:thing-descriptions>

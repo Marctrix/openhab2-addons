@@ -605,6 +605,11 @@
       <artifactId>org.openhab.binding.regoheatpump</artifactId>
       <version>${project.version}</version>
     </dependency>
+	<dependency>
+	  <groupid>org.openhab.addons.bundles</groupid>
+	  <artifactid>org.openhab.binding.remoteboot</artifactid>
+	  <version>${project.version}</version>
+	</dependency>
     <dependency>
       <groupId>org.openhab.addons.bundles</groupId>
       <artifactId>org.openhab.binding.rfxcom</artifactId>
